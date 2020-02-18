@@ -19,4 +19,12 @@ public class UsuarioController {
         List<Usuario> listaUsuarios = repository.findAll();
         return listaUsuarios;
     }
+
+    @RequestMapping("/usuariosNombre")
+    public List<Usuario> listaUsuariosNombre(String nombre) {
+
+        List<Usuario> listaUsuarios = repository.findByNombre(nombre);
+        return listaUsuarios;
+    }
+
 }

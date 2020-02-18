@@ -6,40 +6,27 @@ import javax.persistence.*;
 public class Usuario {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY) //ya que hay un campo autoincremental
-    private int id;
-    @Column
-    private String usuario;
-    @Column
-    private String contrasenha;
+    private String nombre;
+    @Column (name = "contrasenha")
+    private String contraseña;
 
     // Constructor
     public Usuario(){}
 
-
-    public String getUsuario() {
-        return usuario;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getContrasenha() {
-        return contrasenha;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setContrasenha(String contrasenha) {
-        this.contrasenha = contrasenha;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }
