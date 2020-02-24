@@ -20,11 +20,11 @@ public class UsuarioController {
         return listaUsuarios;
     }
 
-    @RequestMapping("/usuariosNombre")
-    public List<Usuario> listaUsuariosNombre(String nombre) {
+    @RequestMapping("/usuarioNombre")
+    public Usuario usuarioNombre(String nombre) {
 
-        List<Usuario> listaUsuarios = repository.findByNombre(nombre);
-        return listaUsuarios;
+        Usuario usuario = repository.findByNombre(nombre);
+        return usuario;
     }
 
 }
