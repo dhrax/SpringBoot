@@ -10,6 +10,8 @@ import javax.persistence.*;
         @GeneratedValue (strategy = GenerationType.IDENTITY) //ya que hay un campo autoincremental
         private int id;
         @Column
+        private byte[] imagen;
+        @Column
         private String nombre;
         @Column
         private String desarrolladora;
@@ -134,5 +136,15 @@ import javax.persistence.*;
         public void setFavorito(boolean favorito) {
             this.favorito = favorito;
         }
+
+
+        public byte[] getImagen() {
+            return imagen;
+        }
+
+        public void setImagen(byte[] imagen) {
+            this.imagen = imagen;
+        }
+
 
     }

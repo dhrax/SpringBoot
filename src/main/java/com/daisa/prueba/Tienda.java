@@ -15,6 +15,8 @@ public class Tienda {
     private float latitud;
     @Column
     private float longitud;
+    @Column
+    private long telefono;
 
     // Constructor
     public Tienda(){}
@@ -51,5 +53,13 @@ public class Tienda {
 
     public void setLongitud(float longitud) {
         this.longitud = longitud;
+    }
+
+    public long getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
     }
 }

@@ -7,4 +7,5 @@ import java.util.List;
 public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
     List<Usuario> findAll();
     Usuario findByNombre(String nombre);
+    Long countByNombre(String nombre);
 }

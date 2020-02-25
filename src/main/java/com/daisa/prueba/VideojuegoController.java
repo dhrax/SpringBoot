@@ -56,6 +56,7 @@ public class VideojuegoController {
 
     @RequestMapping("/add_videojuego")
     public void addVideojuego( String nombre,
+                             byte[] imagen,
                              String desarrolladora,
                              String genero,
                              String anhoSalida,
@@ -69,6 +70,7 @@ public class VideojuegoController {
 
         Videojuego videojuego = new Videojuego();
         videojuego.setNombre(nombre);
+        videojuego.setImagen(imagen);
         videojuego.setDesarrolladora(desarrolladora);
         videojuego.setGenero(genero);
         videojuego.setAnhoSalida(anhoSalida);

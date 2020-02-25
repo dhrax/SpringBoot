@@ -27,4 +27,11 @@ public class UsuarioController {
         return usuario;
     }
 
+    @RequestMapping("/contarPorNombre")
+    public Long contarUsuarios(String nombre) {
+
+        Long numUsuarios = repository.countByNombre(nombre);
+        return numUsuarios;
+    }
+
 }
